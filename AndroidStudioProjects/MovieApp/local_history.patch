@@ -1,0 +1,16 @@
+Index: app/src/main/java/com/example/movieapp/ui/home/HomeViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/movieapp/ui/home/HomeViewModel.kt	(date 1624083125343)
++++ app/src/main/java/com/example/movieapp/ui/home/HomeViewModel.kt	(date 1624083125343)
+@@ -61,7 +61,7 @@
+     }
+ 
+     suspend fun getUpcomingMovieList(){
+-        repository.getMoviesUpcoming(Utils.API_KEY,"es-US","original_title.desc").enqueue(object : retrofit2.Callback<Response>{
++        repository.getMoviesUpcoming(Utils.API_KEY,"es-US","popularity.desc").enqueue(object : retrofit2.Callback<Response>{
+             override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
+                 if (response.isSuccessful){
+                     val movies = response.body()
